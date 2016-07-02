@@ -1,0 +1,27 @@
+[submodule "celery"]
+	path = celery
+	url = git@github.com:celery/celery
+[submodule "kombu"]
+	path = kombu
+	url = git@github.com:celery/kombu
+[submodule "py-amqp"]
+	path = py-amqp
+	url = git@github.com:celery/py-amqp
+[submodule "case"]
+	path = case
+	url = git@github.com:celery/case
+[submodule "sphinx_celery"]
+	path = sphinx_celery
+	url = git@github.com:celery/sphinx_celery
+[submodule "vine"]
+	path = vine
+	url = git@github.com:celery/vine
+[submodule "cyanide"]
+	path = cyanide
+	url = git@github.com:celery/cyanide
+[submodule "django-celery"]
+	path = django-celery
+	url = git@github.com:celery/django-celery
+[submodule "billiard"]
+	path = billiard
+	url = git@github.com:celery/billiard
