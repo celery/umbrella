@@ -22,6 +22,9 @@ install:
 pull:
 	$(GIT) submodule foreach $(GIT) pull --rebase
 
+push:
+	$(GIT) submodule foreach $(GIT) push
+
 $(LIBRABBITMQ):
 	$(GIT) clone "$(GITUSER)@$(GITHUB):$(GITLIBRABBITMQ)" $@
 
@@ -80,6 +83,7 @@ clean-build:
 help:
 	@echo "init                 - Fetch and update all submodules."
 	@echo "pull                 - Pull changes from all repositories."
+	@echo "push                 - Push changes from all repositories."
 	@echo "develop              - Run setup.py develop for all modules."
 	@echo "install              - Run setup.py install for all modules."
 	@echo "master               - Select Celery development version"
