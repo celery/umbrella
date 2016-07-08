@@ -45,6 +45,8 @@ master:
 
 5.0-devel: master
 	(cd celery; $(GIT) checkout 5.0-devel)
+	(cd kombu; $(GIT) checkout 5.0-devel)
+	(cd py-amqp; $(GIT) checkout 3.0-devel)
 
 3.1:
 	(cd py-amqp; $(GIT) checkout 1.4)
