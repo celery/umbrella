@@ -82,6 +82,9 @@ pull:
 push:
 	$(GIT) submodule foreach $(GIT) push
 
+assert-clean:
+	$(GIT) submodule foreach $(GIT) diff-index --quiet HEAD --
+
 $(LIBRABBITMQ):
 	$(GIT) clone "$(GITUSER)@$(GITHUB):$(GITLIBRABBITMQ)" $@
 
@@ -151,6 +154,7 @@ help:
 	@echo "  reqs-cyanide       - Install Cyanide requirements."
 	@echo "  reqs-django-celery - Install Django-Celery requirements."
 	@echo "  reqs-sphinx_celery - Install Sphinx-Celery requirements."
+	@echo "  assert-clean       - Error if any repositories changed."
 	@echo "pull                 - Pull changes from all repositories."
 	@echo "push                 - Push changes from all repositories."
 	@echo "develop              - Run setup.py develop for all modules."
